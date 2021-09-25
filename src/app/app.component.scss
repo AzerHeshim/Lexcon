@@ -60,6 +60,17 @@ header, .logo{
   transition: all 1s;
 }
 
+.footers_logo{
+  display: none;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+.small .footers_logo{
+  display: block;
+}
+.small .main_logo{
+  display: none;
+}
 /* Section Styles */
 
 .one {
@@ -72,6 +83,7 @@ header, .logo{
   color: #fff;
   font-size: 72px;
   text-align: center;
+  font-weight: normal;
 }
 
 .one{
@@ -128,6 +140,13 @@ header, .logo{
   top: 230px;
   //margin-right: auto;
 }
+.main_logo{
+  width: 200px;
+}
+.footers_logo{
+  width: 200px;
+}
+
 .who_we_are{
 
   color: #2669B3;
@@ -216,7 +235,10 @@ header, .logo{
   height: 100%;
 }
 .header_column{
-  width: 35%;
+  width: 30%;
+}
+.top_menu{
+  width: 40%;
 }
 .top_menu{
   display: flex;
@@ -227,9 +249,10 @@ header, .logo{
 }
 
 .menu_item{
-  margin-right: 80px;
-  font-size: 25px;
+  margin-right: 44px;
+  font-size: 20px;
   font-weight: bold;
+  cursor:pointer;
 }
 
 .languages{
@@ -346,7 +369,7 @@ color: #2669B3;
   color: #fff;
   visibility: hidden;
   opacity: 0;
-
+  padding: 0 12px;
   /* transition effect. not necessary */
   transition: opacity .2s, visibility .2s;
 }
@@ -581,6 +604,7 @@ color: #2669B3;
 
 .bottom_part{
   display: flex;
+  width: 100%;
 }
 .bottom_items{
   margin-right: 40px;
@@ -648,6 +672,7 @@ color: #2669B3;
 }
 .seven{
   padding: 0 120px;
+  margin-bottom: 56px;
 }
 .seven_content{
   display: flex;
@@ -808,4 +833,50 @@ select.form-control {
   border: none;
   box-shadow: none;
   cursor: pointer;
+}
+
+.footer{
+  background: #D6D6D7;
+  padding: 32px 120px;
+  display: flex;
+  align-items: initial;
+  justify-content: space-between;
+}
+
+.footer_logo{
+  width: 30%;
+}
+.links{
+  width: 30%;
+}
+.footer_copyright{
+  width: 30%;
+}
+.footer_copyright_head{
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+.horizontal_links{
+  display: flex;
+  align-items: center;
+  color: #A0A0A0;
+  margin-bottom: 16px;
+}
+.footer_line{
+  background: #A0A0A0;
+}
+
+.last_link{
+  color: #A0A0A0;
+  margin-bottom: 24px;
+}
+
+.footer_copyright{
+  display: flex;
+  align-items: end;
+  justify-content: end;
+}
+
+.footer_copyright_text{
+  color: #2669B3;
 }
