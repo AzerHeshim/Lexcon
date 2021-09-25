@@ -6,6 +6,7 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {ScrollToModule} from '@nicky-lenaers/ngx-scroll-to';
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {ScrollToModule} from '@nicky-lenaers/ngx-scroll-to';
         deps: [HttpClient]
       }
     }),
-    ScrollToModule.forRoot()
+    ScrollToModule.forRoot(),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

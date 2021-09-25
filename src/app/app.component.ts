@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
 declare var $: any;
 import * as AOS from 'aos';
+import {FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,10 @@ import * as AOS from 'aos';
 export class AppComponent implements OnInit{
   title = 'Lexcon';
   moreOpened: boolean = false;
+  mailForm = new FormGroup({
+    firstName: new FormControl(''),
+    lastName: new FormControl(''),
+  });
   openMore(): void{
    this.moreOpened = !this.moreOpened;
   }
@@ -24,7 +29,9 @@ export class AppComponent implements OnInit{
   ngOnInit(): void {
     AOS.init();
   }
-
+  onSubmit() : void{
+    console.warn(this.mailForm.value);
+  }
 }
 $(document).on('scroll', function () {
   if ($(document).scrollTop() > 200) {

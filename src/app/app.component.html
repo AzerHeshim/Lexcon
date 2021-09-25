@@ -179,14 +179,14 @@
     <div class="bottom_part">
       <div class="civil  bottom_items bottom_width">
         <div class="img__wrap">
-          <img class="img__img" src="assets/emek.svg" />
+          <img class="img__img" src="assets/inzibati.svg" />
           <p class="img_visible_text"> {{ 'home.labour' | translate }}</p>
           <p class="img__description">{{ 'home.labourinside' | translate }}</p>
         </div>
       </div>
       <div class="family bottom_items bottom_width">
         <div class="img__wrap">
-          <img class="img__img" src="assets/gomruk.svg" />
+          <img class="img__img" src="assets/civil.svg" />
           <p class="img_visible_text"> {{ 'home.custom' | translate }}</p>
           <p class="img__description">{{ 'home.custominside' | translate }}</p>
         </div>
@@ -241,9 +241,10 @@
     <div class="centent_right">
       <p class="write_us">{{ 'home.writeus' | translate }}</p>
       <p class="write_us_text">{{ 'home.asap' | translate }}</p>
+      <form [formGroup]="mailForm">
       <div class="name_sur">
-        <input class="input_style half_input" type="text" placeholder="{{ 'home.name' | translate }}">
-        <input class="input_style half_input" type="text" placeholder="{{ 'home.lastname' | translate }}">
+        <input class="input_style half_input" type="text" placeholder="{{ 'home.name' | translate }}" formControlName="firstName">
+        <input class="input_style half_input" type="text" placeholder="{{ 'home.lastname' | translate }}" formControlName="lastName">
       </div>
       <div class="name_sur">
         <input class="input_style half_input" type="number" placeholder="{{ 'home.phone' | translate }}">
@@ -260,7 +261,8 @@
         <div class="control__indicator"></div>
       </label>
       <p>{{ 'home.accept' | translate }}</p>
-   <button class="send">{{ 'home.send' | translate }}</button>
+   <button class="send" (click)="onSubmit()">{{ 'home.send' | translate }}</button>
+      </form>
     </div>
   </div>
 </section>
