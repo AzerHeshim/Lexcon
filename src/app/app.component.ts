@@ -3,7 +3,7 @@ import {TranslateService} from '@ngx-translate/core';
 declare var $: any;
 import * as AOS from 'aos';
 import {FormGroup, FormControl } from '@angular/forms';
-
+import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,10 +12,15 @@ import {FormGroup, FormControl } from '@angular/forms';
 export class AppComponent implements OnInit{
   title = 'Lexcon';
   moreOpened: boolean = false;
-  mailForm = new FormGroup({
-    firstName: new FormControl(''),
-    lastName: new FormControl(''),
-  });
+  selected = ''
+  checked = false;
+  checkedName = false;
+  // mailForm = new FormGroup({
+  //   first_name: new FormControl(''),
+  //   last_name: new FormControl(''),
+  //   phone: new FormControl(''),
+  //   email: new FormControl(''),
+  // });
   openMore(): void{
    this.moreOpened = !this.moreOpened;
   }
@@ -29,8 +34,27 @@ export class AppComponent implements OnInit{
   ngOnInit(): void {
     AOS.init();
   }
-  onSubmit() : void{
-    console.warn(this.mailForm.value);
+  changeStatus(event: { target: HTMLInputElement }): void{
+    // this.checked = !this.checked;
+    // // event.target.name = 'checkbox is checked';
+    // console.log(event.target.name, event.target.value)
+    // if(this.checked === true){
+    //   event.target.name = 'checkbox_is_checked';
+    //   this.checkedName = event.target.name
+    // } else {
+    //   event.target.name = 'checkbox_is_not_checked';
+    //   this.checkedName = event.target.name
+    // }
+  }
+  onSubmit(e: Event): void{
+    e.preventDefault();
+    emailjs.sendForm('service_7k1jf6u', 'template_wle7j1j', e.target as HTMLFormElement,  'user_7WOaqFW99JMcBDm8YkZc5')
+      .then((result: EmailJSResponseStatus) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+    // console.warn(this.mailForm.value);
   }
 }
 $(document).on('scroll', function () {

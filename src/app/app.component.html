@@ -21,6 +21,28 @@
       <a class="language_item" (click)="useLanguage('ru')">RU</a>
     </div>
   </div>
+  <div class="header_mobile">
+    <a href="">
+      <img class="main_logo" src="assets/logo_main.svg" alt="">
+      <img class="footers_logo" src="assets/lexcon_logo_footer.svg" alt="">
+    </a>
+
+    <input type="checkbox" id="menu-toggle"/>
+    <label id="menu-button" class="menu-button" for="menu-toggle">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </label>
+    <div id="site-menu">
+      <img class="footers_logo" src="assets/lexcon_logo_footer.svg" alt="">
+      <ul class="header_column top_menu">
+
+        <li class="menu_item" [ngxScrollTo]="'#about'"   [ngxScrollToOffset]="-200">{{ 'home.about' | translate }}</li>
+        <li class="menu_item" [ngxScrollTo]="'#projects'"   [ngxScrollToOffset]="-200">{{ 'home.projets' | translate }}</li>
+        <li class="menu_item" [ngxScrollTo]="'#contact'"   [ngxScrollToOffset]="-200">{{ 'home.contacts' | translate }}</li>
+      </ul>
+    </div>
+  </div>
 </header>
 
 <section class="section one"  >
@@ -60,7 +82,7 @@
   <p class="three_end_text">{{ 'home.separateText' | translate }}  </p>
 </section>
 
-<section class="section four" data-aos="zoom-in" data-aos-once="false" data-aos-duration="1000">
+<section class="section four" data-aos="zoom-in" data-aos-once="false" data-aos-duration="500">
   <h2 class="who_we_are_head our_mission our_mission_head">{{ 'home.ourMiss' | translate }} </h2>
   <div class="our_mission_texts">
     <div  class="our_mission_texts_left">
@@ -87,7 +109,7 @@
       <div class="copyright">
 
         <div class="img__wrap">
-          <img class="img__img" src="assets/copyright.svg" />
+          <img class="img__img" src="assets/copyrightlaw.svg" />
           <p class="img_visible_text">{{ 'home.copyrightlaw' | translate }}</p>
           <p class="img__description">{{ 'home.copyrightlawinText' | translate }}</p>
         </div>
@@ -150,7 +172,7 @@
           </div>
           <div class="family">
             <div class="img__wrap">
-              <img class="img__img" src="assets/notariat.svg" />
+              <img class="img__img" src="assets/notariatlaw.svg" />
               <p class="img_visible_text"> {{ 'home.notariat' | translate }}</p>
               <p class="img__description">{{ 'home.notariatinside' | translate }}</p>
             </div>
@@ -179,24 +201,67 @@
     <div class="bottom_part">
       <div class="civil  bottom_items bottom_width">
         <div class="img__wrap">
-          <img class="img__img" src="assets/inzibati.svg" />
+          <img class="img__img" src="assets/emeklaw.svg" />
           <p class="img_visible_text"> {{ 'home.labour' | translate }}</p>
           <p class="img__description">{{ 'home.labourinside' | translate }}</p>
         </div>
       </div>
       <div class="family bottom_items bottom_width">
         <div class="img__wrap">
-          <img class="img__img" src="assets/civil.svg" />
+          <img class="img__img" src="assets/gomruklaw.svg" />
           <p class="img_visible_text"> {{ 'home.custom' | translate }}</p>
           <p class="img__description">{{ 'home.custominside' | translate }}</p>
         </div>
       </div>
       <div class="family bottom_width bottom_last">
         <div class="img__wrap">
-          <img class="img__img" src="assets/land.svg" />
+          <img class="img__img" src="assets/landlaw.svg" />
           <p class="img_visible_text"> {{ 'home.landlaw' | translate }}</p>
           <p class="img__description">{{ 'home.landlawniside' | translate }}</p>
         </div>
+      </div>
+    </div>
+  </div>
+  <div class="services_list_mobile">
+    <div class="d-flex author_family">
+      <div class="author">
+        <p class="author_text">Müəllif hüquqları</p>
+      </div>
+      <div class="family_civil">
+        <div class="civil_mob"><p class="author_text">Müəllif hüquqları</p></div>
+        <div class="family_mob"><p class="author_text">Müəllif hüquqları</p></div>
+      </div>
+    </div>
+    <div class="consultation">
+      <p class="consultation_text">{{ 'home.lawconsunlation' | translate }}</p>
+    </div>
+    <div class="d-flex author_family">
+      <div class="family_civil family_civil_Sec">
+        <div class="civil_mob" style="background: rgba(242, 242, 242, 0.8);"><p class="author_text">Müəllif hüquqları</p></div>
+        <div class="family_mob" style="background: rgba(242, 242, 242, 0.8);"><p class="author_text">Müəllif hüquqları</p></div>
+      </div>
+      <div class="author author_sec" style="background: rgba(242, 242, 242, 0.8);">
+        <p class="author_text">Müəllif hüquqları</p>
+      </div>
+    </div>
+    <div class="d-flex emek_gomruk bottom_mob" >
+      <div class="civil_mob" style="background: linear-gradient(180deg, rgba(252, 255, 119, 0.25) -43.57%, rgba(242, 242, 242, 0.2) 100%);"><p class="author_text">Müəllif hüquqları</p></div>
+      <div class="family_mob" style="background: linear-gradient(180deg, rgba(252, 255, 119, 0.25) -43.57%, rgba(242, 242, 242, 0.2) 100%);"><p class="author_text">Müəllif hüquqları</p></div>
+    </div>
+    <div class="d-flex emek_gomruk bottom_mob">
+      <div class="civil_mob" style="background: linear-gradient(180deg, rgba(252, 255, 119, 0.25) -43.57%, rgba(242, 242, 242, 0.2) 100%);"><p class="author_text">Müəllif hüquqları</p></div>
+      <div class="family_mob" style="background: linear-gradient(180deg, rgba(252, 255, 119, 0.25) -43.57%, rgba(242, 242, 242, 0.2) 100%);"><p class="author_text">Müəllif hüquqları</p></div>
+    </div>
+    <div class="pulsuz_kons">
+      <div class="pulsuz_kons_inside">
+        <div class="call">
+        <img class="call_img" src="assets/call.svg" alt="">
+        </div>
+        <p class="call_text">{{ 'home.freecons' | translate }}</p>
+        <div>
+        <p style="margin-top: 16px">(012) 480 19 20</p>
+        <p>(012) 480 19 20</p></div>
+        <p class="advice_call">{{ 'home.advice' | translate }}</p>
       </div>
     </div>
   </div>
@@ -241,34 +306,38 @@
     <div class="centent_right">
       <p class="write_us">{{ 'home.writeus' | translate }}</p>
       <p class="write_us_text">{{ 'home.asap' | translate }}</p>
-      <form [formGroup]="mailForm">
+      <form  id="contact-form"  (submit)="onSubmit($event)">
       <div class="name_sur">
-        <input class="input_style half_input" type="text" placeholder="{{ 'home.name' | translate }}" formControlName="firstName">
-        <input class="input_style half_input" type="text" placeholder="{{ 'home.lastname' | translate }}" formControlName="lastName">
+        <input class="input_style half_input" type="text" placeholder="{{ 'home.name' | translate }}" name="first_name">
+        <input class="input_style half_input" type="text" placeholder="{{ 'home.lastname' | translate }}" name="last_name">
       </div>
       <div class="name_sur">
-        <input class="input_style half_input" type="number" placeholder="{{ 'home.phone' | translate }}">
-        <input class="input_style half_input" type="email" placeholder="{{ 'home.email' | translate }}">
+        <input class="input_style half_input" type="number" placeholder="{{ 'home.phone' | translate }}" name="phone">
+        <input class="input_style half_input" type="email" placeholder="{{ 'home.email' | translate }}" name="email">
       </div>
-      <select class="form-control input_style">
-        <option value="">{{ 'home.select' | translate }}</option>
-        <option value="1">Option 1</option>
-        <option value="2">Option 2</option>
+      <select class="form-control input_style" name="test" id="agents" [(ngModel)]="selected">
+<!--        <option value="">{{ 'home.select' | translate }}</option>-->
+        <option [value]="'Konsaltinq'">Konsaltinq</option>
+        <option [value]="'Hüquqi yardım'">Hüquqi yardım </option>
+        <option [value]="'Partnyorluq'">Partnyorluq</option>
+        <option [value]="'Press / Media əlaqəri'">Press / Media əlaqəri</option>
+        <option [value]="'Digər'">Digər</option>
       </select>
-      <textarea class="input_style textarea" placeholder="Məzmun" name="Description" id="" cols="30" rows="10"></textarea>
+      <textarea class="input_style textarea" placeholder="Məzmun" name="description" id="" cols="30" rows="10" ></textarea>
       <label class="control control--checkbox">{{ 'home.wantmore' | translate }}
-        <input type="checkbox" checked="checked"/>
+        <input type="checkbox" name="checkbox_is_checked"  [(ngModel)]="checkedName" [value]="checkedName" />
         <div class="control__indicator"></div>
       </label>
       <p>{{ 'home.accept' | translate }}</p>
-   <button class="send" (click)="onSubmit()">{{ 'home.send' | translate }}</button>
+<!--   <button type='submit' class="send" (click)="onSubmit($event)">{{ 'home.send' | translate }}</button>-->
+        <input class="send" type="submit" value="Send">
       </form>
     </div>
   </div>
 </section>
 <section class="section eight footer" >
   <div class="footer_logo">
-  <img src="assets/lexcon_logo_footer.svg" alt="">
+  <img style="width: 120px; margin-bottom: 32px" src="assets/lexcon_logo_footer.svg" alt="">
   </div>
   <div class="links">
     <p class="footer_copyright_head">{{ 'home.shortcuts' | translate }}</p>
