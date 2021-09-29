@@ -121,8 +121,9 @@ header, .logo{
 }
 .three{
   background: url("../assets/Bizkimik.svg");
-  background-size: cover;
+  background-size: 100%;
   background-position: center;
+  background-repeat: no-repeat;
   height: 900px;
   color: #ffffff;
   padding-right: 120px;
@@ -207,8 +208,10 @@ header, .logo{
 }
 
 .who_we_are_head{
-  font-size: 110px;
+  font-size: 100px;
   text-align: right;
+  position: relative;
+  top: 100px;
 }
 
 .last{
@@ -658,7 +661,7 @@ color: #2669B3;
 }
 
 .six_item_img{
-  margin-bottom: 24px;
+  margin-bottom: 40px;
 }
 .six_item_text{
   font-size: 20px;
@@ -1033,6 +1036,15 @@ select.form-control {
 .civil_mob, .family_mob{
   height: 100%;
 }
+
+.bold{
+  font-weight: bold;
+}
+#site-menu .footers_logo{
+  position: absolute;
+}
+
+
 
 @media (max-width: 769px) {
   .main_logo, .footers_logo {

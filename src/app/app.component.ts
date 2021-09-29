@@ -15,6 +15,9 @@ export class AppComponent implements OnInit{
   selected = ''
   checked = false;
   checkedName = false;
+  languageAzSelected = false;
+  languageRuSelected = false;
+  languageEnSelected = false;
   // mailForm = new FormGroup({
   //   first_name: new FormControl(''),
   //   last_name: new FormControl(''),
@@ -29,7 +32,19 @@ export class AppComponent implements OnInit{
   }
   useLanguage(language: string): void {
     this.translate.use(language);
-  }
+    if (language === 'az'){
+      this.languageAzSelected = true;
+      this.languageEnSelected = false;
+      this.languageRuSelected = false;
+    } else if (language === 'en'){
+      this.languageEnSelected = true;
+      this.languageRuSelected = false;
+      this.languageAzSelected = false;
+    } else if (language === 'ru'){
+      this.languageRuSelected = true;
+      this.languageAzSelected = false;
+      this.languageEnSelected = false;
+    }}
 
   ngOnInit(): void {
     AOS.init();

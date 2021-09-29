@@ -14,11 +14,11 @@
       <li class="menu_item" [ngxScrollTo]="'#contact'"   [ngxScrollToOffset]="-200">{{ 'home.contacts' | translate }}</li>
     </ul>
     <div class="languages header_column" >
-      <a class="language_item" (click)="useLanguage('az')">AZ</a>
+      <a class="language_item" [ngClass]="languageAzSelected? 'bold' : ''" (click)="useLanguage('az')">AZ</a>
       <div class="line"></div>
-      <a class="language_item" (click)="useLanguage('en')">EN</a>
+      <a class="language_item" [ngClass]="languageEnSelected? 'bold' : ''"  (click)="useLanguage('en')">EN</a>
       <div class="line"></div>
-      <a class="language_item" (click)="useLanguage('ru')">RU</a>
+      <a class="language_item" [ngClass]="languageRuSelected? 'bold' : ''"  (click)="useLanguage('ru')">RU</a>
     </div>
   </div>
   <div class="header_mobile">
@@ -126,7 +126,7 @@
           <div class="img__wrap">
             <img class="img__img" src="assets/family.svg" />
             <p class="img_visible_text">{{ 'home.familylaw' | translate }}</p>
-            <p class="img__description">T{{ 'home.familylawintext' | translate }}</p>
+            <p class="img__description">{{ 'home.familylawintext' | translate }}</p>
           </div>
         </div>
       </div>
@@ -150,7 +150,7 @@
         <div class="or">
           <p class="or_head">{{ 'home.or' | translate }}</p>
           <p class="or_write">{{ 'home.writeus' | translate }}</p>
-          <img class="scroll" src="assets/scroll.svg" alt="">
+          <img class="scroll" [ngxScrollTo]="'#contact'"   [ngxScrollToOffset]="-200" src="assets/scroll.svg" alt="">
         </div>
       </div>
     </div>
@@ -225,11 +225,11 @@
   <div class="services_list_mobile">
     <div class="d-flex author_family">
       <div class="author">
-        <p class="author_text">Müəllif hüquqları</p>
+        <p class="author_text">{{ 'home.copyrightlaw' | translate }}</p>
       </div>
       <div class="family_civil">
-        <div class="civil_mob"><p class="author_text">Müəllif hüquqları</p></div>
-        <div class="family_mob"><p class="author_text">Müəllif hüquqları</p></div>
+        <div class="civil_mob"><p class="author_text">{{ 'home.civillaw' | translate }}</p></div>
+        <div class="family_mob"><p class="author_text">{{ 'home.familylaw' | translate }}</p></div>
       </div>
     </div>
     <div class="consultation">
@@ -237,20 +237,20 @@
     </div>
     <div class="d-flex author_family">
       <div class="family_civil family_civil_Sec">
-        <div class="civil_mob" style="background: rgba(242, 242, 242, 0.8);"><p class="author_text">Müəllif hüquqları</p></div>
-        <div class="family_mob" style="background: rgba(242, 242, 242, 0.8);"><p class="author_text">Müəllif hüquqları</p></div>
+        <div class="civil_mob" style="background: rgba(242, 242, 242, 0.8);"><p class="author_text">{{ 'home.inzibati' | translate }}</p></div>
+        <div class="family_mob" style="background: rgba(242, 242, 242, 0.8);"><p class="author_text">{{ 'home.notariat' | translate }}</p></div>
       </div>
       <div class="author author_sec" style="background: rgba(242, 242, 242, 0.8);">
-        <p class="author_text">Müəllif hüquqları</p>
+        <p class="author_text">{{ 'home.vergi' | translate }}</p>
       </div>
     </div>
     <div class="d-flex emek_gomruk bottom_mob" >
-      <div class="civil_mob" style="background: linear-gradient(180deg, rgba(252, 255, 119, 0.25) -43.57%, rgba(242, 242, 242, 0.2) 100%);"><p class="author_text">Müəllif hüquqları</p></div>
-      <div class="family_mob" style="background: linear-gradient(180deg, rgba(252, 255, 119, 0.25) -43.57%, rgba(242, 242, 242, 0.2) 100%);"><p class="author_text">Müəllif hüquqları</p></div>
+      <div class="civil_mob" style="background: linear-gradient(180deg, rgba(252, 255, 119, 0.25) -43.57%, rgba(242, 242, 242, 0.2) 100%);"><p class="author_text">{{ 'home.blue' | translate }}</p></div>
+      <div class="family_mob" style="background: linear-gradient(180deg, rgba(252, 255, 119, 0.25) -43.57%, rgba(242, 242, 242, 0.2) 100%);"><p class="author_text">{{ 'home.labour' | translate }}</p></div>
     </div>
     <div class="d-flex emek_gomruk bottom_mob">
-      <div class="civil_mob" style="background: linear-gradient(180deg, rgba(252, 255, 119, 0.25) -43.57%, rgba(242, 242, 242, 0.2) 100%);"><p class="author_text">Müəllif hüquqları</p></div>
-      <div class="family_mob" style="background: linear-gradient(180deg, rgba(252, 255, 119, 0.25) -43.57%, rgba(242, 242, 242, 0.2) 100%);"><p class="author_text">Müəllif hüquqları</p></div>
+      <div class="civil_mob" style="background: linear-gradient(180deg, rgba(252, 255, 119, 0.25) -43.57%, rgba(242, 242, 242, 0.2) 100%);"><p class="author_text">{{ 'home.custom' | translate }}</p></div>
+      <div class="family_mob" style="background: linear-gradient(180deg, rgba(252, 255, 119, 0.25) -43.57%, rgba(242, 242, 242, 0.2) 100%);"><p class="author_text">{{ 'home.landlaw' | translate }}</p></div>
     </div>
     <div class="pulsuz_kons">
       <div class="pulsuz_kons_inside">
@@ -278,8 +278,8 @@
       <p class="six_item_text">{{ 'home.projetsitem' | translate }}</p>
     </div>
     <div class="six_item">
-      <img class="six_item_img" src="assets/haqqim_logo.svg" alt="">
-      <p class="six_item_text">{{ 'home.projetsitem' | translate }}</p>
+      <img class="six_item_img" src="assets/qazan.svg" alt="">
+      <p class="six_item_text">{{ 'home.projetsitemSecond' | translate }}</p>
     </div>
   </div>
   <hr>
