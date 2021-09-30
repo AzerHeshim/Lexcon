@@ -298,6 +298,8 @@ color: #2669B3;
   , #2669B3);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: 100px;
+  text-align: right;
 }
 .services_div{
   width: 100%;
@@ -1047,6 +1049,25 @@ select.form-control {
 
 
 @media (max-width: 769px) {
+  #site-menu .footers_logo{
+    display: block;
+  }
+  .header_column{
+    width: fit-content;
+  }
+  .who_we_are_head {
+    top: 0;
+  }
+  .services{
+    font-size: 30px;
+  }
+  .languages{
+    position: absolute;
+    bottom: 34px;
+  }
+  .languages, .menu_item {
+    color: #2669B3;
+  }
   .main_logo, .footers_logo {
     width: 136px;
     position: relative;
@@ -1056,19 +1077,20 @@ select.form-control {
   .top_menu{
     display: block;
     margin: 100px auto;
+    margin-left: 24px;
   }
   #site-menu li, #site-menu p {
     padding: 10px;
     margin: 0px;
-    color: #000000;
+    color: #2669B3;
     text-decoration: none;
     text-transform: none;
     list-style: none;
     display: none;
-    text-align: center;
     transition: all .5s;
     /* Credit to Mike for the responsive font-sizing https://www.madebymike.com.au/writing/fluid-type-calc-examples/ */
     font-size: calc(20px + (20 - 18) * ((100vw - 300px) / (1600 - 300)));
+    text-align: left;
   }
 
   #site-menu p:hover {
@@ -1201,7 +1223,8 @@ select.form-control {
   @keyframes menu-open {
     100% {
       width: 100vw;
-      height: 100vh;
+      height: 80vh;
+      box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.5);
     }
   }
   @keyframes menu-closed {
@@ -1249,7 +1272,7 @@ select.form-control {
   }
   .three {
     /* background-repeat: no-repeat; */
-    background-size: 225%;
+    background-size: contain;
     background-position: top;
     background-repeat: no-repeat;
     height: 700px;
@@ -1265,7 +1288,7 @@ select.form-control {
     width: 100%;
     margin-left: auto;
     position: relative;
-    top: 230px;
+    top: 108px;
   }
   .who_we_are_head_sed {
     text-align: center;

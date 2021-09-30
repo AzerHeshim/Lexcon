@@ -36,11 +36,22 @@
     <div id="site-menu">
       <img class="footers_logo" src="assets/lexcon_logo_footer.svg" alt="">
       <ul class="header_column top_menu">
-
+        <li class="menu_item" ><a href="">Home</a></li>
         <li class="menu_item" [ngxScrollTo]="'#about'"   [ngxScrollToOffset]="-200">{{ 'home.about' | translate }}</li>
         <li class="menu_item" [ngxScrollTo]="'#projects'"   [ngxScrollToOffset]="-200">{{ 'home.projets' | translate }}</li>
+        <li class="menu_item" [ngxScrollTo]="'#serv'"   [ngxScrollToOffset]="-200">{{ 'home.services' | translate }}</li>
         <li class="menu_item" [ngxScrollTo]="'#contact'"   [ngxScrollToOffset]="-200">{{ 'home.contacts' | translate }}</li>
+<li>
+        <div class="languages header_column" >
+          <a class="language_item" [ngClass]="languageAzSelected? 'bold' : ''" (click)="useLanguage('az')">AZ</a>
+          <div class="line"></div>
+          <a class="language_item" [ngClass]="languageEnSelected? 'bold' : ''"  (click)="useLanguage('en')">EN</a>
+          <div class="line"></div>
+          <a class="language_item" [ngClass]="languageRuSelected? 'bold' : ''"  (click)="useLanguage('ru')">RU</a>
+        </div>
+</li>
       </ul>
+
     </div>
   </div>
 </header>
@@ -56,12 +67,12 @@
   <p class="two_linear" >{{ 'home.about' | translate }}</p>
   <p class="two_fields">{{ 'home.fields' | translate }}</p>
   <div class="tab_nav">
-    <button class="tab_nav_item first">{{ 'home.whoWe' | translate }}</button>
-    <button class="tab_nav_item second">{{ 'home.ourMiss' | translate }}</button>
-    <button class="tab_nav_item last">{{ 'home.services' | translate }}</button>
+    <button class="tab_nav_item first" [ngxScrollTo]="'#who_we'"   [ngxScrollToOffset]="-300">{{ 'home.whoWe' | translate }}</button>
+    <button class="tab_nav_item second" [ngxScrollTo]="'#miss'"   [ngxScrollToOffset]="-200">{{ 'home.ourMiss' | translate }}</button>
+    <button class="tab_nav_item last" [ngxScrollTo]="'#serv'"   [ngxScrollToOffset]="-200">{{ 'home.services' | translate }}</button>
   </div>
 </section>
-<section class="section three" data-aos="zoom-in-up" data-aos-once="false" data-aos-duration="1000">
+<section class="section three" id="who_we" data-aos="zoom-in-up" data-aos-once="false" data-aos-duration="1000">
   <h2 class="who_we_are_head">{{ 'home.whoWe' | translate }}</h2>
   <div class="three_texts">
     <div class="who_we_are">
@@ -82,7 +93,7 @@
   <p class="three_end_text">{{ 'home.separateText' | translate }}  </p>
 </section>
 
-<section class="section four" data-aos="zoom-in" data-aos-once="false" data-aos-duration="500">
+<section class="section four" id="miss" data-aos="zoom-in" data-aos-once="false" data-aos-duration="500">
   <h2 class="who_we_are_head our_mission our_mission_head">{{ 'home.ourMiss' | translate }} </h2>
   <div class="our_mission_texts">
     <div  class="our_mission_texts_left">
@@ -98,8 +109,8 @@
     </div>
   </div>
 </section>
-<section class="section five"  data-aos="zoom-up" data-aos-once="false" data-aos-duration="1000">
-  <h2 class="who_we_are_head our_mission services">{{ 'home.services' | translate }}</h2>
+<section class="section five" id="serv"  data-aos="zoom-up" data-aos-once="false" data-aos-duration="1000">
+  <h2 class="our_mission services">{{ 'home.services' | translate }}</h2>
   <div class="services_div">
   <p class="services_text">{{ 'home.servicesText' | translate }}</p>
   </div>

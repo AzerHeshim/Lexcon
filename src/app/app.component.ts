@@ -63,7 +63,7 @@ export class AppComponent implements OnInit{
   }
   onSubmit(e: Event): void{
     e.preventDefault();
-    emailjs.sendForm('service_7k1jf6u', 'template_wle7j1j', e.target as HTMLFormElement,  'user_7WOaqFW99JMcBDm8YkZc5')
+    emailjs.sendForm('service_xekms0g', 'template_uda672q', e.target as HTMLFormElement,  'user_Y1fCbzgmDQDRNUAs0ssy7')
       .then((result: EmailJSResponseStatus) => {
         console.log(result.text);
       }, (error) => {
