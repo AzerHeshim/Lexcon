@@ -9,9 +9,9 @@
     </h1>
   </nav>
     <ul class="header_column top_menu">
-      <li class="menu_item" [ngxScrollTo]="'#about'"   [ngxScrollToOffset]="-200">{{ 'home.about' | translate }}</li>
-      <li class="menu_item" [ngxScrollTo]="'#projects'"   [ngxScrollToOffset]="-200">{{ 'home.projets' | translate }}</li>
-      <li class="menu_item" [ngxScrollTo]="'#contact'"   [ngxScrollToOffset]="-200">{{ 'home.contacts' | translate }}</li>
+      <li class="menu_item" [ngxScrollTo]="'#about'"   [ngxScrollToOffset]="-200"><a class="effect-underline">{{ 'home.about' | translate }}</a></li>
+      <li class="menu_item" [ngxScrollTo]="'#projects'"   [ngxScrollToOffset]="-200"><a class="effect-underline" >{{ 'home.projets' | translate }}</a></li>
+      <li class="menu_item" [ngxScrollTo]="'#contact'"   [ngxScrollToOffset]="-400"><a class="effect-underline" >{{ 'home.contacts' | translate }}</a></li>
     </ul>
     <div class="languages header_column" >
       <a class="language_item" [ngClass]="languageAzSelected? 'bold' : ''" (click)="useLanguage('az')">AZ</a>
@@ -37,10 +37,22 @@
       <img class="footers_logo" src="assets/lexcon_logo_footer.svg" alt="">
       <ul class="header_column top_menu">
         <li class="menu_item" ><a href="">Home</a></li>
+        <input type="checkbox" id="menu-toggle"/>
+        <label id="menu-button"  for="menu-toggle">
         <li class="menu_item" [ngxScrollTo]="'#about'"   [ngxScrollToOffset]="-200">{{ 'home.about' | translate }}</li>
-        <li class="menu_item" [ngxScrollTo]="'#projects'"   [ngxScrollToOffset]="-200">{{ 'home.projets' | translate }}</li>
-        <li class="menu_item" [ngxScrollTo]="'#serv'"   [ngxScrollToOffset]="-200">{{ 'home.services' | translate }}</li>
+        </label>
+        <input type="checkbox" id="menu-toggle"/>
+        <label id="menu-button"  for="menu-toggle">
+        <li class="menu_item" [ngxScrollTo]="'#projects'"   [ngxScrollToOffset]="-100">{{ 'home.projets' | translate }}</li>
+        </label>
+        <input type="checkbox" id="menu-toggle"/>
+        <label id="menu-button"  for="menu-toggle">
+        <li class="menu_item" [ngxScrollTo]="'#serv'"   [ngxScrollToOffset]="-100">{{ 'home.services' | translate }}</li>
+        </label>
+        <input type="checkbox" id="menu-toggle"/>
+        <label id="menu-button"  for="menu-toggle">
         <li class="menu_item" [ngxScrollTo]="'#contact'"   [ngxScrollToOffset]="-200">{{ 'home.contacts' | translate }}</li>
+        </label>
 <li>
         <div class="languages header_column" >
           <a class="language_item" [ngClass]="languageAzSelected? 'bold' : ''" (click)="useLanguage('az')">AZ</a>
@@ -56,11 +68,11 @@
   </div>
 </header>
 
-<section class="section one"  >
+<section class="section one"  id="top">
   <h2><b>{{ 'home.mainHead' | translate }}</b></h2>
   <h2>{{ 'home.mainHeadSecond' | translate }}</h2>
   <div class="scroll_down">
-    <img class="scroll_down_img" src="assets/scroll_down.svg" alt="">
+    <img class="scroll_down_img animate-flicker" src="assets/scroll_down.svg" alt="">
   </div>
 </section>
 <section class="section two animated" data-aos="zoom-in" data-aos-once="false" data-aos-duration="1000" id="about">
@@ -93,23 +105,23 @@
   <p class="three_end_text">{{ 'home.separateText' | translate }}  </p>
 </section>
 
-<section class="section four" id="miss" data-aos="zoom-in" data-aos-once="false" data-aos-duration="500">
+<section class="section four" id="miss" data-aos="zoom-in" data-aos-once="false" data-aos-duration="1000">
   <h2 class="who_we_are_head our_mission our_mission_head">{{ 'home.ourMiss' | translate }} </h2>
   <div class="our_mission_texts">
     <div  class="our_mission_texts_left">
-   <p class="our_missions_p">{{ 'home.ourMissone' | translate }} </p>
-   <p class="our_missions_p to_right">{{ 'home.ourMisstwo' | translate }}</p>
-   <p class="our_missions_p to_more_right">{{ 'home.ourMissthree' | translate }}</p>
+   <p class="our_missions_p"><img class="mark" src="assets/mark.svg" alt="">{{ 'home.ourMissone' | translate }} </p>
+   <p class="our_missions_p to_right"><img class="mark" src="assets/mark.svg" alt="">{{ 'home.ourMisstwo' | translate }}</p>
+   <p class="our_missions_p to_more_right"><img class="mark" src="assets/mark.svg" alt="">{{ 'home.ourMissthree' | translate }}</p>
     </div>
     <div  class="our_mission_texts_center"></div>
     <div class="our_mission_texts_right">
-      <p class="our_missions_p">{{ 'home.ourMissfour' | translate }}</p>
-      <p class="our_missions_p to_left">{{ 'home.ourMissfive' | translate }}</p>
-      <p class="our_missions_p to_more_left">{{ 'home.ourMisssix' | translate }}</p>
+      <p class="our_missions_p"><img class="mark" src="assets/mark.svg" alt="">{{ 'home.ourMissfour' | translate }}</p>
+      <p class="our_missions_p to_left"><img class="mark" src="assets/mark.svg" alt="">{{ 'home.ourMissfive' | translate }}</p>
+      <p class="our_missions_p to_more_left"><img class="mark" src="assets/mark.svg" alt="">{{ 'home.ourMisssix' | translate }}</p>
     </div>
   </div>
 </section>
-<section class="section five" id="serv"  data-aos="zoom-up" data-aos-once="false" data-aos-duration="1000">
+<section class="section five" id="serv"  data-aos="zoom-in" data-aos-once="false" data-aos-duration="1000">
   <h2 class="our_mission services">{{ 'home.services' | translate }}</h2>
   <div class="services_div">
   <p class="services_text">{{ 'home.servicesText' | translate }}</p>
@@ -129,14 +141,14 @@
         <div class="civil">
           <div class="img__wrap">
             <img class="img__img" src="assets/civil.svg" />
-            <p class="img_visible_text"> {{ 'home.civillaw' | translate }}</p>
+            <p class="img_visible_text" style="color: #fff"> {{ 'home.civillaw' | translate }}</p>
             <p class="img__description">{{ 'home.civillawText' | translate }}</p>
           </div>
         </div>
         <div class="family">
           <div class="img__wrap">
             <img class="img__img" src="assets/family.svg" />
-            <p class="img_visible_text">{{ 'home.familylaw' | translate }}</p>
+            <p class="img_visible_text" style="color: #fff">{{ 'home.familylaw' | translate }}</p>
             <p class="img__description">{{ 'home.familylawintext' | translate }}</p>
           </div>
         </div>
@@ -166,7 +178,10 @@
       </div>
     </div>
   </div>
-  <button class="collapse_cols" (click)="openMore()">{{ 'home.seeall' | translate }}</button>
+  <button class="collapse_cols" (click)="openMore()">
+   <span *ngIf="this.moreOpened">{{ 'home.seeless' | translate }}</span>
+   <span *ngIf="!this.moreOpened">{{ 'home.seeall' | translate }}</span>
+  </button>
 
   <div [ngClass]="moreOpened ? 'expanded' : ''" class="services_list after_expand">
     <div style="display: flex; width: 100%">
@@ -213,14 +228,14 @@
       <div class="civil  bottom_items bottom_width">
         <div class="img__wrap">
           <img class="img__img" src="assets/emeklaw.svg" />
-          <p class="img_visible_text"> {{ 'home.labour' | translate }}</p>
+          <p class="img_visible_text" style="color: white"> {{ 'home.labour' | translate }}</p>
           <p class="img__description">{{ 'home.labourinside' | translate }}</p>
         </div>
       </div>
       <div class="family bottom_items bottom_width">
         <div class="img__wrap">
           <img class="img__img" src="assets/gomruklaw.svg" />
-          <p class="img_visible_text"> {{ 'home.custom' | translate }}</p>
+          <p class="img_visible_text" style="color: white"> {{ 'home.custom' | translate }}</p>
           <p class="img__description">{{ 'home.custominside' | translate }}</p>
         </div>
       </div>
@@ -301,17 +316,26 @@
   </div>
   <div class="seven_content">
     <div class="centent_left">
-      <p class="address">Azərbaycan, Bakı ş., Səbail rayonu, Əhəd Yaqubov, ev 2., m. 50</p>
+      <p class="address">{{ 'home.address' | translate }}</p>
       <p class="email">info@lexcon.az</p>
       <p class="phone_one">(012) 480 19 20</p>
       <p class="phone_two">(070) 440 19 20</p>
       <p class="follow_us">{{ 'home.followus' | translate }}</p>
       <div class="socials">
+        <a href="https://www.facebook.com/lexconaz" target="_blank">
         <img class="socials_item" src="assets/facebook.svg" alt="">
+        </a>
+        <a href="https://www.linkedin.com/company/lexconazerbaijan" target="_blank">
         <img class="socials_item" src="assets/linkedin.svg" alt="">
+        </a>
+        <a href="https://www.instagram.com/lexconaz" target="_blank">
         <img class="socials_item" src="assets/instagram.svg" alt="">
+        </a>
+        <a href="https://twitter.com/lexconaz" target="_blank">
         <img class="socials_item" src="assets/twitter.svg" alt="">
+        </a>
       </div>
+      <img [ngxScrollTo]="'#top'"  style="cursor:pointer;" src="assets/Arrowup.svg" alt="">
 <!--      <img src="" alt="">-->
     </div>
     <div class="centent_right">
@@ -339,28 +363,33 @@
         <input type="checkbox" name="checkbox_is_checked"  [(ngModel)]="checkedName" [value]="checkedName" />
         <div class="control__indicator"></div>
       </label>
-      <p>{{ 'home.accept' | translate }}</p>
+      <p style="font-size: 12px">{{ 'home.accept' | translate }}</p>
 <!--   <button type='submit' class="send" (click)="onSubmit($event)">{{ 'home.send' | translate }}</button>-->
         <input class="send" type="submit" value="Send">
+        <img style="width: 200px" *ngIf="spinning" src="assets/loading-icegif-1.gif" alt="">
+        <p *ngIf="ifSuccess"><img style="margin-right: 8px; margin-top: 16px" src="assets/succes.svg" alt="">Success</p>
+        <p *ngIf="ifError"><img style="margin-right: 8px; margin-top: 16px" src="assets/cancel.svg" alt="">Error</p>
       </form>
     </div>
   </div>
 </section>
 <section class="section eight footer" >
   <div class="footer_logo">
+    <a href="">
   <img style="width: 120px; margin-bottom: 32px" src="assets/lexcon_logo_footer.svg" alt="">
+    </a>
   </div>
   <div class="links">
     <p class="footer_copyright_head">{{ 'home.shortcuts' | translate }}</p>
     <div class="horizontal_links">
-      <a class="language_item">{{ 'home.about' | translate }}</a>
+      <a class="language_item" [ngxScrollTo]="'#about'"   [ngxScrollToOffset]="-200">{{ 'home.about' | translate }}</a>
       <div class="line footer_line"></div>
-      <a class="language_item">{{ 'home.ourMiss' | translate }}</a>
+      <a class="language_item" [ngxScrollTo]="'#miss'"   [ngxScrollToOffset]="-200">{{ 'home.ourMiss' | translate }}</a>
       <div class="line footer_line"></div>
-      <a class="language_item">{{ 'home.services' | translate }}</a>
+      <a class="language_item"  [ngxScrollTo]="'#serv'"   [ngxScrollToOffset]="-200">{{ 'home.services' | translate }}</a>
     </div>
-    <p class="last_link">{{ 'home.projets' | translate }}</p>
-    <p class="last_link">{{ 'home.contact' | translate }}</p>
+    <p class="last_link" [ngxScrollTo]="'#projects'"   [ngxScrollToOffset]="-200">{{ 'home.projets' | translate }}</p>
+    <p class="last_link" [ngxScrollTo]="'#contact'"   [ngxScrollToOffset]="-200">{{ 'home.contacts' | translate }}</p>
   </div>
   <div class="footer_copyright">
     <p class="footer_copyright_text">{{ 'home.rights' | translate }}</p>
