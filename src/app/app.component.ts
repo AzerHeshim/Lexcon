@@ -19,7 +19,7 @@ export class AppComponent implements OnInit{
   language = '';
   languageAzSelected = false;
   languageRuSelected = false;
-  languageEnSelected = false;
+  languageEnSelected = true;
   // mailForm = new FormGroup({
   //   first_name: new FormControl(''),
   //   last_name: new FormControl(''),
@@ -30,6 +30,21 @@ export class AppComponent implements OnInit{
   ifError = false;
   openMore(): void{
    this.moreOpened = !this.moreOpened;
+  }
+
+  constructor(private translate: TranslateService) {
+    translate.setDefaultLang('en');
+  }
+  ngOnInit(): void {
+    AOS.init();
+    this.language = localStorage.getItem('lang');
+    if(localStorage.getItem('lang') === 'az'){
+      this.useLanguage('az');
+    } else if (localStorage.getItem('lang') === 'en'){
+      this.useLanguage('en');
+    } else if (localStorage.getItem('lang') === 'ru'){
+      this.useLanguage('ru');
+    }
   }
   useLanguage(language: string): void {
     this.translate.use(language);
@@ -52,12 +67,6 @@ export class AppComponent implements OnInit{
       this.languageAzSelected = false;
       this.languageEnSelected = false;
     }}
-  constructor(private translate: TranslateService) {
-    translate.setDefaultLang(localStorage.getItem('lang'));
-  }
-  ngOnInit(): void {
-    AOS.init();
-  }
   changeStatus(event: { target: HTMLInputElement }): void{
     // this.checked = !this.checked;
     // // event.target.name = 'checkbox is checked';
