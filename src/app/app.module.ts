@@ -7,6 +7,8 @@ import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {ScrollToModule} from '@nicky-lenaers/ngx-scroll-to';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {NgxPageScrollModule} from 'ngx-page-scroll';
+import {NgxPageScrollCoreModule} from 'ngx-page-scroll-core';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     }),
     ScrollToModule.forRoot(),
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    NgxPageScrollModule,
+    NgxPageScrollCoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

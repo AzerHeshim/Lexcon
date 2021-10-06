@@ -127,7 +127,8 @@ header, .logo{
   background-repeat: no-repeat;
   height: 900px;
   color: #ffffff;
-  padding-right: 120px;
+
+  padding-right: 287px;
   padding-top: 120px;
 }
 .three_end{
@@ -193,7 +194,7 @@ header, .logo{
   color: #ffffff;
 }
 .tab_nav_item{
-  height: 37px;
+  height: 48px;
   padding: 12px 32px;
   background: #D7D6D6;
   box-shadow: none;
@@ -201,6 +202,7 @@ header, .logo{
   outline: none;
   margin-top: 40px;
   color: #2669B3;
+  font-size: 16px;
 }
 .first{
   border-top-left-radius: 10px;
@@ -212,7 +214,7 @@ header, .logo{
   font-size: 70px;
   text-align: right;
   position: relative;
-  top: 178px;
+  top: 78px;
 }
 
 .last{
@@ -338,9 +340,11 @@ color: #2669B3;
   margin-right: 40px;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 .left_top{
   display: flex;
+  height: 900px;
 }
 .right_part{
   width: 30%;
@@ -384,18 +388,19 @@ color: #2669B3;
 }
 
 .copyright{
-  height: 642px;
   margin-right: 40px;
   width: 48%;
   overflow: hidden;
+  height: 96%;
 }
 .civil_family{
   width: 48%;
   overflow: hidden;
+  height: 96%;
 }
 
 .civil, .family{
-  height: 300px;
+  height: 48%;
   margin-bottom: 40px;
   overflow: hidden;
 }
@@ -447,13 +452,13 @@ color: #2669B3;
   visibility: hidden;
   opacity: 1;
 }
-.consultation{
-  height: 200px;
-  background: #608EC7;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+//.consultation{
+//  height: 200px;
+//  background: #608EC7;
+//  display: flex;
+//  align-items: center;
+//  justify-content: center;
+//}
 .law_text{
   font-size: 40px;
   color: #ffffff;
@@ -495,7 +500,8 @@ color: #2669B3;
 .our_mission_texts{
   display: flex;
   /* width: 100%; */
-  padding-left: 56px;
+  padding-left: 72px;
+  padding-right: 40px;
   color: black;
   position: relative;
   top: 330px;
@@ -515,6 +521,10 @@ color: #2669B3;
   display: flex;
   align-items: center;
 }
+.left{
+  position: relative;
+  left: 30px;
+}
 .to_right{
   position: relative;
   left: 33px;
@@ -526,11 +536,11 @@ color: #2669B3;
 }
 .to_left{
   position: relative;
-  right: 40px;
+  right: 15px;
 }
 .to_more_left{
   position: relative;
-  right: 100px;
+  right: 80px;
 }
 .numbers{
   font-weight: bold;
@@ -600,7 +610,7 @@ color: #2669B3;
 .after_expand{
   display: none;
   transition: all 0.5s;
-  height: 1000px;
+  height: 1185px;
   overflow: hidden;
   margin-top: 32px;
   flex-direction: column;
@@ -645,7 +655,7 @@ color: #2669B3;
 }
 
 .civil_family{
-  margin-right: 40px;
+  //margin-right: 40px;
 }
 .copyright_right{
   width: 100%;
@@ -659,7 +669,8 @@ color: #2669B3;
   margin-right: 40px;
 }
 .bottom_width{
-  width: 35%;
+  width: 34%;
+  height: 100%;
 }
 .bottom_last{
   width: 30%;
@@ -1179,13 +1190,12 @@ select.form-control {
 }
 
 .consultation{
-  background: #2669B3;
-  border-radius: 10px;
-  height: 70px;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg,  #00c2ff, #4c80c1 100%);
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 16px;
 }
 .consultation_text{
   font-size: 15px;
@@ -1207,7 +1217,9 @@ select.form-control {
 .civil_mob, .family_mob{
   height: 100%;
 }
-
+.bottom_civil{
+  margin-right: 40px;
+}
 .bold{
   font-weight: bold;
 }
@@ -1493,7 +1505,7 @@ a.effect-underline:hover:after {
   }
   .three_end_text {
     position: relative;
-    top: 100px;
+    top: 0px;
     width: 100%;
     margin-left: 16px;
     padding-right: 32px;
@@ -1504,7 +1516,7 @@ a.effect-underline:hover:after {
     margin-left: 20px;
   }
   .three_end {
-    height: 164px;
+    height: 100px;
   }
   .four {
     background-size: 100%;
@@ -1520,7 +1532,7 @@ a.effect-underline:hover:after {
     padding-left: 32px;
     color: black;
     position: relative;
-    top: 100px;
+    top: 133px;
   }
   .our_mission_texts_left {
     width: 100%;
@@ -1585,7 +1597,7 @@ a.effect-underline:hover:after {
   .after_expand {
     display: none;
     transition: all 0.5s;
-    height: 1000px;
+    height: 1185px;
     overflow: hidden;
     margin-top: 32px;
     flex-direction: column;

@@ -46,6 +46,7 @@ export class AppComponent implements OnInit{
       this.useLanguage('ru');
     }
   }
+
   useLanguage(language: string): void {
     this.translate.use(language);
     if (language === 'az'){
