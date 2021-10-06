@@ -224,7 +224,7 @@ header, .logo{
 }
 .four{
   background: url("../assets/ourmissionblank-min2.svg");
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 900px;
@@ -504,7 +504,7 @@ color: #2669B3;
   padding-right: 40px;
   color: black;
   position: relative;
-  top: 330px;
+  top: 365px;
 }
 .our_mission_texts_left{
   width: 34%;
