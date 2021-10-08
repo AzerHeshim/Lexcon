@@ -43,11 +43,11 @@
         </label>
         <input type="checkbox" id="menu-toggle"/>
         <label id="menu-button"  for="menu-toggle">
-        <li class="menu_item" [ngxScrollTo]="'#projects'" [ngxScrollToOffset]="-270" [ngxScrollToDuration]="2000"   >{{ 'home.projets' | translate }}</li>
+        <li class="menu_item" [ngxScrollTo]="'#serv'" [ngxScrollToDuration]="2000"  [ngxScrollToOffset]="-300">{{ 'home.services' | translate }}</li>
         </label>
         <input type="checkbox" id="menu-toggle"/>
         <label id="menu-button"  for="menu-toggle">
-        <li class="menu_item" [ngxScrollTo]="'#serv'" [ngxScrollToDuration]="2000"  [ngxScrollToOffset]="-300">{{ 'home.services' | translate }}</li>
+          <li class="menu_item" [ngxScrollTo]="'#projects'" [ngxScrollToOffset]="-270" [ngxScrollToDuration]="2000"   >{{ 'home.projets' | translate }}</li>
         </label>
         <input type="checkbox" id="menu-toggle"/>
         <label id="menu-button"  for="menu-toggle">
@@ -77,10 +77,10 @@
 </section>
 <section class="section two animated" data-aos="zoom-in" data-aos-once="false" data-aos-duration="1000" id="about">
   <p class="two_linear" >{{ 'home.about' | translate }}</p>
-  <p class="two_fields">{{ 'home.fields' | translate }}</p>
+<!--  <p class="two_fields">{{ 'home.fields' | translate }}</p>-->
   <div class="tab_nav">
     <button class="tab_nav_item first" pageScroll href="#who_we" [pageScrollOffset]="170">{{ 'home.whoWe' | translate }}</button>
-    <button class="tab_nav_item second" pageScroll href="#miss" [pageScrollOffset]="140">{{ 'home.ourMiss' | translate }}</button>
+    <button class="tab_nav_item second" pageScroll href="#miss" [pageScrollOffset]="220">{{ 'home.ourMiss' | translate }}</button>
     <button class="tab_nav_item last" pageScroll href="#serv" [pageScrollOffset]="370">{{ 'home.services' | translate }}</button>
   </div>
 </section>
@@ -88,8 +88,8 @@
   <h2 class="who_we_are_head">{{ 'home.whoWe' | translate }}</h2>
   <div class="three_texts">
     <div class="who_we_are">
-    <p class="who_we_are_head_sed">{{ 'home.we' | translate }}</p>
-    <p class="who_we_are_text">{{ 'home.weText' | translate }}</p>
+    <p class="who_we_are_head_sed who_we_first">{{ 'home.we' | translate }}</p>
+    <p class="who_we_are_text shrink_width">{{ 'home.weText' | translate }}</p>
     </div>
     <div class="our_mission_three">
       <p class="who_we_are_head_sed mission_head">{{ 'home.missionHead' | translate }} </p>
@@ -109,15 +109,15 @@
   <h2 class="who_we_are_head our_mission our_mission_head" >{{ 'home.ourMiss' | translate }} </h2>
   <div class="our_mission_texts">
     <div  class="our_mission_texts_left">
-   <p class="our_missions_p"><img class="mark" src="assets/mark.svg" alt="">{{ 'home.ourMissone' | translate }} </p>
-   <p class="our_missions_p to_right"><img class="mark" src="assets/mark.svg" alt="">{{ 'home.ourMisstwo' | translate }}</p>
-   <p class="our_missions_p to_more_right"><img class="mark" src="assets/mark.svg" alt="">{{ 'home.ourMissthree' | translate }}</p>
+   <p class="our_missions_p"><img class="mark" src="assets/mark.svg" alt=""><span class="dot">•</span>{{ 'home.ourMissone' | translate }} </p>
+   <p class="our_missions_p to_right"><img class="mark" src="assets/mark.svg" alt=""><span class="dot">•</span>{{ 'home.ourMisstwo' | translate }}</p>
+   <p class="our_missions_p to_more_right"><img class="mark" src="assets/mark.svg" alt=""><span class="dot">•</span>{{ 'home.ourMissthree' | translate }}</p>
     </div>
     <div  class="our_mission_texts_center"></div>
     <div class="our_mission_texts_right">
-      <p class="our_missions_p left"><img class="mark" src="assets/mark.svg" alt="">{{ 'home.ourMissfour' | translate }}</p>
-      <p class="our_missions_p to_left"><img class="mark" src="assets/mark.svg" alt="">{{ 'home.ourMissfive' | translate }}</p>
-      <p class="our_missions_p to_more_left"><img class="mark" src="assets/mark.svg" alt="">{{ 'home.ourMisssix' | translate }}</p>
+      <p class="our_missions_p left"><img class="mark" src="assets/mark.svg" alt=""><span class="dot">•</span>{{ 'home.ourMissfour' | translate }}</p>
+      <p class="our_missions_p to_left"><img class="mark" src="assets/mark.svg" alt=""><span class="dot">•</span>{{ 'home.ourMissfive' | translate }}</p>
+      <p class="our_missions_p to_more_left"><img class="mark" src="assets/mark.svg" alt=""><span class="dot">•</span>{{ 'home.ourMisssix' | translate }}</p>
     </div>
   </div>
 </section>
@@ -267,16 +267,16 @@
         <div class="family_mob" style="background: rgba(242, 242, 242, 0.8);"><p class="author_text">{{ 'home.notariat' | translate }}</p></div>
       </div>
       <div class="author author_sec" style="background: rgba(242, 242, 242, 0.8);">
-        <p class="author_text">{{ 'home.vergi' | translate }}</p>
+        <p class="author_text"> {{ 'home.blue' | translate }}</p>
       </div>
     </div>
     <div class="d-flex emek_gomruk bottom_mob" >
-      <div class="civil_mob" style="background: linear-gradient(180deg, rgba(252, 255, 119, 0.25) -43.57%, rgba(242, 242, 242, 0.2) 100%);"><p class="author_text">{{ 'home.blue' | translate }}</p></div>
-      <div class="family_mob" style="background: linear-gradient(180deg, rgba(252, 255, 119, 0.25) -43.57%, rgba(242, 242, 242, 0.2) 100%);"><p class="author_text">{{ 'home.labour' | translate }}</p></div>
+      <div class="civil_mob" style="background: linear-gradient(180deg, rgba(252, 255, 119, 0.25) -43.57%, rgba(242, 242, 242, 0.2) 100%);"><p class="author_text">{{ 'home.vergi' | translate }}</p></div>
+      <div class="family_mob" style="background: linear-gradient(181.62deg, rgba(215, 255, 208, 0.79) -74.37%, rgba(242, 242, 242, 0.632) 98.63%);"><p class="author_text">{{ 'home.labour' | translate }}</p></div>
     </div>
     <div class="d-flex emek_gomruk bottom_mob">
-      <div class="civil_mob" style="background: linear-gradient(180deg, rgba(252, 255, 119, 0.25) -43.57%, rgba(242, 242, 242, 0.2) 100%);"><p class="author_text">{{ 'home.custom' | translate }}</p></div>
-      <div class="family_mob" style="background: linear-gradient(180deg, rgba(252, 255, 119, 0.25) -43.57%, rgba(242, 242, 242, 0.2) 100%);"><p class="author_text">{{ 'home.landlaw' | translate }}</p></div>
+      <div class="civil_mob" style="background: linear-gradient(179.15deg, rgba(174, 144, 99, 0.632) -55.26%, rgba(242, 242, 242, 0.632) 54.23%);"><p class="author_text">{{ 'home.custom' | translate }}</p></div>
+      <div class="family_mob" style="background: rgba(242, 242, 242, 0.8);"><p class="author_text">{{ 'home.landlaw' | translate }}</p></div>
     </div>
     <div class="pulsuz_kons">
       <div class="pulsuz_kons_inside">
@@ -335,7 +335,7 @@
         <img class="socials_item" src="assets/twitter.svg" alt="">
         </a>
       </div>
-      <img [ngxScrollTo]="'#top'"  style="cursor:pointer;margin-bottom: 24px;     width: 100px;" src="assets/Arrowup.svg" alt="">
+      <img [ngxScrollTo]="'#top'" class="to_top_desk"  style="cursor:pointer;margin-bottom: 24px;     width: 100px;" src="assets/Arrowup.svg" alt="">
 <!--      <img src="" alt="">-->
     </div>
     <div class="centent_right">
@@ -350,34 +350,42 @@
         <input class="input_style half_input" type="number" placeholder="{{ 'home.phone' | translate }}" name="phone">
         <input class="input_style half_input" type="email" placeholder="{{ 'home.email' | translate }}" name="email">
       </div>
-      <select class="form-control input_style" name="test" id="agents" [(ngModel)]="selected">
+      <select class="form-control input_style" name="test" id="agents" [(ngModel)]="selected" >
+        <option value="" disabled selected>{{ 'home.selectbox' | translate }}</option>
 <!--        <option value="">{{ 'home.select' | translate }}</option>-->
-        <option [value]="'Konsaltinq'">Konsaltinq</option>
-        <option [value]="'Hüquqi yardım'">Hüquqi yardım </option>
-        <option [value]="'Partnyorluq'">Partnyorluq</option>
-        <option [value]="'Press / Media əlaqəri'">Press / Media əlaqəri</option>
-        <option [value]="'Digər'">Digər</option>
+        <option [value]="'Konsaltinq'">{{ 'home.consult' | translate }}</option>
+        <option [value]="'Hüquqi yardım'">{{ 'home.lawhelp' | translate }}</option>
+        <option [value]="'Partnyorluq'">{{ 'home.partner' | translate }}</option>
+        <option [value]="'Press / Media əlaqəri'">{{ 'home.press' | translate }}</option>
+        <option [value]="'Digər'">{{ 'home.else' | translate }}</option>
       </select>
-      <textarea class="input_style textarea" placeholder="Məzmun" name="description" id="" cols="30" rows="10" ></textarea>
+      <textarea class="input_style textarea" placeholder="{{ 'home.textarea' | translate }}" name="description" id="" cols="30" rows="10" ></textarea>
       <label class="control control--checkbox">{{ 'home.wantmore' | translate }}
         <input type="checkbox" name="checkbox_is_checked"  [(ngModel)]="checkedName" [value]="checkedName" />
         <div class="control__indicator"></div>
       </label>
-      <p style="font-size: 12px">{{ 'home.accept' | translate }}</p>
+      <p class="accept">{{ 'home.accept' | translate }}</p>
 <!--   <button type='submit' class="send" (click)="onSubmit($event)">{{ 'home.send' | translate }}</button>-->
         <input class="send" type="submit" value="{{ 'home.send' | translate }}">
         <img style="width: 200px" *ngIf="spinning" src="assets/loading-icegif-1.gif" alt="">
         <p *ngIf="ifSuccess"><img style="margin-right: 8px; margin-top: 16px" src="assets/succes.svg" alt="">{{ 'home.success' | translate }}</p>
         <p *ngIf="ifError"><img style="margin-right: 8px; margin-top: 16px" src="assets/cancel.svg" alt="">Error</p>
       </form>
+      <img [ngxScrollTo]="'#top'" class="to_top_mob"  style="cursor:pointer;margin-bottom: 24px;     width: 100px;" src="assets/Arrowup.svg" alt="">
     </div>
   </div>
 </section>
 <section class="section eight footer" >
   <div class="footer_logo">
     <a href="">
-  <img style="width: 120px; margin-bottom: 32px" src="assets/lexcon_logo_footer.svg" alt="">
+  <img style="width: 120px; " src="assets/lexcon_logo_footer.svg" alt="">
+
     </a>
+
+  </div>
+  <div class="devis">
+  <p style="color: #2669B3; font-size: 10px ; margin-top: 16px; "><b>{{ 'home.footerHead' | translate }}</b></p>
+  <p style="color: #2669B3; font-size: 10px ; margin-bottom: 32px">{{ 'home.footerHeadSecond' | translate }}</p>
   </div>
   <div class="links">
     <p class="footer_copyright_head">{{ 'home.shortcuts' | translate }}</p>

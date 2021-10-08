@@ -154,16 +154,17 @@ header, .logo{
 
   color: #2669B3;
   text-align: center;
-  width: 85%;
+  width: 76%;
   margin-left: auto;
 }
 .who_we_are_head_sed{
-  text-align: center;
+  text-align: left;
   font-size: 24px;
   margin-bottom: 16px;
 }
 .who_we_are_text{
   font-size: 20px;
+  text-align: left;
 }
 .our_mission_three{
   margin-top: 56px;
@@ -263,6 +264,7 @@ header, .logo{
   text-decoration: none;
   display: inline-block;
   position: relative;
+  white-space: nowrap;
 }
 
 .languages{
@@ -279,11 +281,15 @@ header, .logo{
 }
 .language_item, .line{
 margin-right: 10px;
+  white-space: nowrap;
 }
 .line{
   height: 40px;
   width: 2px;
   background: #fff;
+}
+.accept{
+  font-size: 12px
 }
 
 .languages, .menu_item{
@@ -417,6 +423,7 @@ color: #2669B3;
   right: 0;
   background: rgba(7, 22, 30, 0.72);
   color: #fff;
+  white-space: pre-wrap;
   visibility: hidden;
   opacity: 0;
   padding: 0 12px;
@@ -428,6 +435,10 @@ color: #2669B3;
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+.shrink_width{
+  width: 87%;
+  margin-left: auto;
 }
 
 .img__wrap:hover .img__description {
@@ -519,7 +530,7 @@ color: #2669B3;
   font-size: 18px;
   margin-bottom: 45px;
   display: flex;
-  align-items: center;
+  //align-items: center;
 }
 .left{
   position: relative;
@@ -929,7 +940,10 @@ select.form-control {
 .footer_line{
   background: #A0A0A0;
 }
-
+.who_we_first{
+  width: 87%;
+  margin-left: auto;
+}
 .last_link{
   color: #A0A0A0;
   margin-bottom: 24px;
@@ -967,7 +981,7 @@ select.form-control {
     top: 126px;
   }
   .who_we_are_head_sed {
-    text-align: center;
+    text-align: left;
     font-size: 20px;
     margin-bottom: 16px;
   }
@@ -983,7 +997,7 @@ select.form-control {
     font-size: 17px;
   }
   .three_end {
-    height: 157px;
+    height: 300px;
   }
   .our_mission_head, .services, .six_head_header, .seven_header{
     font-size: 56px;
@@ -1051,6 +1065,7 @@ select.form-control {
   .address, .email {
     margin-bottom: 56px;
     font-size: 17px;
+    width: 100%;
   }
   .phone_one, .phone_two {
     font-size: 17px;
@@ -1060,8 +1075,8 @@ select.form-control {
     color: #2669B3;
     margin-bottom: 24px;
   }
-  input::placeholder{
-    font-size: 13px;
+  input::placeholder, option, textarea::placeholder, select{
+    font-size: 13px !important;
     color: #9f9f9f;
   }
 }
@@ -1248,10 +1263,31 @@ a.effect-underline:hover:after {
   -webkit-transform: scale(1);
   transform: scale(1);
 }
-
+.to_top_desk{
+  display: block;
+}
+.to_top_mob{
+  display: none;
+}
+.devis{
+  display: none;
+}
 @media (max-width: 769px) {
   .mark{
     display: block;
+  }
+  .devis{
+    display: block;
+  }
+  .to_top_desk{
+    display: none;
+  }
+  .to_top_mob{
+    display: block;
+    margin-left: auto;
+  }
+  .six_head[_ngcontent-qei-c48] {
+    background-size: contain;
   }
   #site-menu .footers_logo{
     display: block;
@@ -1260,7 +1296,7 @@ a.effect-underline:hover:after {
     width: fit-content;
   }
   .who_we_are_head {
-    top: 0;
+    top: 34px;
   }
   .services{
     font-size: 30px;
@@ -1268,6 +1304,11 @@ a.effect-underline:hover:after {
   .languages{
     position: absolute;
     bottom: 34px;
+  }
+  .consultation{
+    height: 70px;
+    display: flex;
+    margin-bottom: 16px;
   }
   .languages, .menu_item {
     color: #2669B3;
@@ -1330,7 +1371,7 @@ a.effect-underline:hover:after {
     left: 25%;
     width: 50%;
     height: 3px;
-    background: #2669B3;;
+    //background: #2669B3;;
     border-radius: 10px;
     overflow: hidden;
     transition: all 0.5s ease;
@@ -1378,7 +1419,9 @@ a.effect-underline:hover:after {
     transform: translateY(5px) rotate(45deg);/*45deg*/
   }
 
-
+.who_we_first{
+  width: 100%;
+}
   #menu-toggle:checked + #menu-button .line:nth-child(2) {
     transform: scaleX(0);
     opacity:0;
@@ -1454,6 +1497,9 @@ a.effect-underline:hover:after {
   .header_data{
     display: none;
   }
+  .accept{
+    font-size: 9px
+  }
   .header_mobile{
     display: block;
     position: relative;
@@ -1477,17 +1523,20 @@ a.effect-underline:hover:after {
   }
   .three {
     /* background-repeat: no-repeat; */
+    background: url("../assets/whowemobile.svg");
     background-size: contain;
     background-position: top;
     background-repeat: no-repeat;
-    height: 700px;
+    height: 762px;
     color: #ffffff;
-    padding-right: 32px;
-    padding-top: 32px;
+    padding-right: 0;
+    padding-top: 98px;
+    font-size: 30px;
   }
   .who_we_are_head {
     font-size: 30px;
     text-align: right;
+    padding-right: 32px;
   }
   .three_texts {
     width: 100%;
@@ -1496,12 +1545,25 @@ a.effect-underline:hover:after {
     top: 108px;
   }
   .who_we_are_head_sed {
-    text-align: center;
+    text-align: left;
     font-size: 16px;
     margin-bottom: 16px;
   }
   .who_we_are_text {
     font-size: 14px;
+    width: 100%;
+  }
+  .who_we_are {
+    color: #2669B3;
+    background: url("../assets/first_circle.svg");
+    text-align: left;
+    width: 100%;
+    /* margin-left: 16px; */
+    background-position: right;
+    background-repeat: no-repeat;
+    padding-left: 16px;
+    padding-right: 24px;
+
   }
   .three_end_text {
     position: relative;
@@ -1510,29 +1572,58 @@ a.effect-underline:hover:after {
     margin-left: 16px;
     padding-right: 32px;
     font-size: 14px;
+    text-align: center;
   }
   .our_principe {
     margin-top: 56px;
-    margin-left: 20px;
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 34px;
+    background: url("../assets/thirdcircle.svg");
+    background-position: right;
+    background-repeat: no-repeat;
+  }
+  .our_mission_head{
+    padding-right: 0px;
   }
   .three_end {
     height: 100px;
   }
   .four {
+    background: url("../assets/missmobile.svg");
     background-size: 100%;
     background-position: top;
-    height: 551px;
+    height: 700px;
     background-repeat: no-repeat;
     color: #ffffff;
     padding-right: 31px;
     padding-top: 26px;
+  }
+  .our_mission_three {
+    margin-top: 56px;
+    color: #2669B3;
+    margin-left: auto;
+    /* margin-right: auto; */
+    width: 100%;
+    padding-left: 45px;
+    padding-right: 16px;
+    background: url("../assets/secondcircle.svg");
+    background-repeat: no-repeat;
+    background-position: left;
   }
   .our_mission_texts {
     display: block;
     padding-left: 32px;
     color: black;
     position: relative;
-    top: 133px;
+    top: 202px;
+  }
+  .dot{
+    display: none;
+  }
+  .left {
+    position: relative;
+    left: 0px;
   }
   .our_mission_texts_left {
     width: 100%;
