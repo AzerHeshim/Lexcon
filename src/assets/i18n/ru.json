@@ -73,5 +73,6 @@
   "home.press": "Пресс / Медиа",
   "home.else": "Другое",
   "home.selectbox": "Выберите подходящую тему",
-  "home.textarea": "Содержание"
+  "home.textarea": "Содержание",
+  "home.required": "Обязательно к заполнению "
 }

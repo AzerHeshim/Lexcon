@@ -343,13 +343,18 @@
       <p class="write_us_text">{{ 'home.asap' | translate }}</p>
       <form  id="contact-form"  (submit)="onSubmit($event)">
       <div class="name_sur">
-        <input class="input_style half_input" type="text" placeholder="{{ 'home.name' | translate }}" name="first_name">
-        <input class="input_style half_input" type="text" placeholder="{{ 'home.lastname' | translate }}" name="last_name">
+        <input class="input_style half_input" [(ngModel)]="name" type="text" placeholder="{{ 'home.name' | translate }}" name="first_name" (keyup)="onKeyupName()" >
+        <input class="input_style half_input" [(ngModel)]="lastname" type="text" placeholder="{{ 'home.lastname' | translate }}" name="last_name" (keyup)="onKeyupLast()">
       </div>
+        <div class="errors">
+          <p class="errors_text" *ngIf="name === '' || name === undefined">{{ 'home.required' | translate }}</p>
+          <p class="errors_text" *ngIf="lastname === '' || lastname === undefined">{{ 'home.required' | translate }}</p>
+        </div>
       <div class="name_sur">
-        <input class="input_style half_input" type="number" placeholder="{{ 'home.phone' | translate }}" name="phone">
-        <input class="input_style half_input" type="email" placeholder="{{ 'home.email' | translate }}" name="email">
+        <input  class="input_style half_input" type="number" placeholder="{{ 'home.phone' | translate }}" name="phone" >
+        <input  class="input_style half_input" type="email" placeholder="{{ 'home.email' | translate }}" name="email" >
       </div>
+
       <select class="form-control input_style" name="test" id="agents" [(ngModel)]="selected" >
         <option value="" disabled selected>{{ 'home.selectbox' | translate }}</option>
 <!--        <option value="">{{ 'home.select' | translate }}</option>-->
@@ -359,14 +364,15 @@
         <option [value]="'Press / Media əlaqəri'">{{ 'home.press' | translate }}</option>
         <option [value]="'Digər'">{{ 'home.else' | translate }}</option>
       </select>
-      <textarea class="input_style textarea" placeholder="{{ 'home.textarea' | translate }}" name="description" id="" cols="30" rows="10" ></textarea>
+      <textarea class="input_style textarea" placeholder="{{ 'home.textarea' | translate }}" name="description" id="" cols="30" rows="10"  ></textarea>
+
       <label class="control control--checkbox">{{ 'home.wantmore' | translate }}
         <input type="checkbox" name="checkbox_is_checked"  [(ngModel)]="checkedName" [value]="checkedName" />
         <div class="control__indicator"></div>
       </label>
       <p class="accept">{{ 'home.accept' | translate }}</p>
 <!--   <button type='submit' class="send" (click)="onSubmit($event)">{{ 'home.send' | translate }}</button>-->
-        <input class="send" type="submit" value="{{ 'home.send' | translate }}">
+        <input class="send" [disabled]="!valid" type="submit" value="{{ 'home.send' | translate }}">
         <img style="width: 200px" *ngIf="spinning" src="assets/loading-icegif-1.gif" alt="">
         <p *ngIf="ifSuccess"><img style="margin-right: 8px; margin-top: 16px" src="assets/succes.svg" alt="">{{ 'home.success' | translate }}</p>
         <p *ngIf="ifError"><img style="margin-right: 8px; margin-top: 16px" src="assets/cancel.svg" alt="">Error</p>

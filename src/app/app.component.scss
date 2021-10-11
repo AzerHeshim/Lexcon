@@ -171,7 +171,7 @@ header, .logo{
   color: #2669B3;
   margin-left: auto;
   margin-right: auto;
-  width: 75%;
+  width: 69%;
 }
 .our_principe{
   margin-top: 56px;
@@ -949,7 +949,14 @@ select.form-control {
   margin-bottom: 24px;
   cursor: pointer;
 }
-
+.errors{
+  display: flex;
+}
+.errors_text{
+  width: 50%;
+  color: red;
+  margin-bottom: 16px;
+}
 .footer_copyright{
   display: flex;
   align-items: end;
@@ -958,6 +965,9 @@ select.form-control {
 
 .footer_copyright_text{
   color: #2669B3;
+}
+.send:disabled{
+  pointer-events: none;
 }
 
 @media (max-width: 1600px) {

@@ -12,8 +12,11 @@ import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 export class AppComponent implements OnInit{
   title = 'Lexcon';
   moreOpened: boolean = false;
-  selected = ''
+  selected = '';
   spinning = false;
+  name: string;
+  lastname: string;
+  valid = false;
   checked = false;
   checkedName = false;
   language = '';
@@ -36,6 +39,14 @@ export class AppComponent implements OnInit{
     translate.setDefaultLang('en');
   }
   ngOnInit(): void {
+    setInterval(()=>{
+      if(( (this.lastname === '' || this.lastname === undefined) || (this.name === '' || this.name === undefined))){
+        this.valid = false;
+      } else {
+        this.valid = true;
+      }
+    }, 1000);
+
     AOS.init();
     this.language = localStorage.getItem('lang');
     if(localStorage.getItem('lang') === 'az'){
@@ -46,7 +57,12 @@ export class AppComponent implements OnInit{
       this.useLanguage('ru');
     }
   }
-
+  onKeyupName(): void{
+    console.log(this.name)
+  }
+  onKeyupLast(): void{
+    console.log(this.lastname)
+  }
   useLanguage(language: string): void {
     this.translate.use(language);
     if (language === 'az'){
@@ -81,6 +97,13 @@ export class AppComponent implements OnInit{
     // }
   }
   onSubmit(e: Event): void{
+    if(this.lastname === '' && this.name === '' ) {
+      this.valid === false;
+      console.log(this.valid);
+    } else {
+      this.valid === true;
+      console.log(this.valid);
+    }
     e.preventDefault();
     this.spinning = true;
     emailjs.sendForm('service_xekms0g', 'template_uda672q', e.target as HTMLFormElement,  'user_Y1fCbzgmDQDRNUAs0ssy7')
