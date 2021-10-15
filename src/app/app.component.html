@@ -15,9 +15,9 @@
     </ul>
     <div class="languages header_column" >
       <a class="language_item" [ngClass]="languageAzSelected? 'bold' : ''" (click)="useLanguage('az')">AZ</a>
-      <div class="line"></div>
+      <div class="line_v"></div>
       <a class="language_item" [ngClass]="languageEnSelected? 'bold' : ''"  (click)="useLanguage('en')">EN</a>
-      <div class="line"></div>
+      <div class="line_v"></div>
       <a class="language_item" [ngClass]="languageRuSelected? 'bold' : ''"  (click)="useLanguage('ru')">RU</a>
     </div>
   </div>
@@ -56,9 +56,9 @@
 <li>
         <div class="languages header_column" >
           <a class="language_item" [ngClass]="languageAzSelected? 'bold' : ''" (click)="useLanguage('az')">AZ</a>
-          <div class="line"></div>
+          <div class="line_v"></div>
           <a class="language_item" [ngClass]="languageEnSelected? 'bold' : ''"  (click)="useLanguage('en')">EN</a>
-          <div class="line"></div>
+          <div class="line_v"></div>
           <a class="language_item" [ngClass]="languageRuSelected? 'bold' : ''"  (click)="useLanguage('ru')">RU</a>
         </div>
 </li>
@@ -347,14 +347,16 @@
         <input class="input_style half_input" [(ngModel)]="lastname" type="text" placeholder="{{ 'home.lastname' | translate }}" name="last_name" (keyup)="onKeyupLast()">
       </div>
         <div class="errors">
-          <p class="errors_text" *ngIf="name === '' || name === undefined">{{ 'home.required' | translate }}</p>
-          <p class="errors_text" *ngIf="lastname === '' || lastname === undefined">{{ 'home.required' | translate }}</p>
+          <p class="errors_text name" *ngIf="(name === '' || name === undefined) && nameClicked">{{ 'home.required' | translate }}</p>
+          <p class="errors_text surname" *ngIf="(lastname === '' || lastname === undefined) && lastClicked">{{ 'home.required' | translate }}</p>
         </div>
       <div class="name_sur">
         <input  class="input_style half_input" type="number" placeholder="{{ 'home.phone' | translate }}" name="phone" >
-        <input  class="input_style half_input" type="email" placeholder="{{ 'home.email' | translate }}" name="email" >
+        <input  class="input_style half_input" [(ngModel)]="email" type="email" placeholder="{{ 'home.email' | translate }}" name="email" (keyup)="onKeyupEmail()">
       </div>
-
+        <div class="errors">
+          <p class="errors_text surname" *ngIf="(email === '' || email === undefined) && emailClicked">{{ 'home.required' | translate }}</p>
+        </div>
       <select class="form-control input_style" name="test" id="agents" [(ngModel)]="selected" >
         <option value="" disabled selected>{{ 'home.selectbox' | translate }}</option>
 <!--        <option value="">{{ 'home.select' | translate }}</option>-->

@@ -16,6 +16,10 @@ export class AppComponent implements OnInit{
   spinning = false;
   name: string;
   lastname: string;
+  email: string;
+  nameClicked = false;
+  lastClicked = false;
+  emailClicked = false;
   valid = false;
   checked = false;
   checkedName = false;
@@ -39,13 +43,13 @@ export class AppComponent implements OnInit{
     translate.setDefaultLang('en');
   }
   ngOnInit(): void {
-    setInterval(()=>{
-      if(( (this.lastname === '' || this.lastname === undefined) || (this.name === '' || this.name === undefined))){
-        this.valid = false;
-      } else {
-        this.valid = true;
-      }
-    }, 1000);
+    // setInterval(()=>{
+    //   if(( (this.lastname === '' || this.lastname === undefined) || (this.name === '' || this.name === undefined) || (this.email === '' || this.email === undefined) )){
+    //     this.valid = false;
+    //   } else {
+    //     this.valid = true;
+    //   }
+    // }, 1000);
 
     AOS.init();
     this.language = localStorage.getItem('lang');
@@ -58,10 +62,37 @@ export class AppComponent implements OnInit{
     }
   }
   onKeyupName(): void{
+    this.nameClicked = true;
+    setInterval(()=>{
+      if(( (this.lastname === '' || this.lastname === undefined) || (this.name === '' || this.name === undefined) || (this.email === '' || this.email === undefined) )){
+        this.valid = false;
+      } else {
+        this.valid = true;
+      }
+    }, 1000);
     console.log(this.name)
   }
   onKeyupLast(): void{
+    this.lastClicked = true;
+    setInterval(()=>{
+      if(( (this.lastname === '' || this.lastname === undefined) || (this.name === '' || this.name === undefined) || (this.email === '' || this.email === undefined) )){
+        this.valid = false;
+      } else {
+        this.valid = true;
+      }
+    }, 1000);
     console.log(this.lastname)
+  }
+  onKeyupEmail(): void{
+    this.emailClicked= true;
+    setInterval(()=>{
+      if(( (this.lastname === '' || this.lastname === undefined) || (this.name === '' || this.name === undefined) || (this.email === '' || this.email === undefined) )){
+        this.valid = false;
+      } else {
+        this.valid = true;
+      }
+    }, 1000);
+    console.log(this.email)
   }
   useLanguage(language: string): void {
     this.translate.use(language);
@@ -97,7 +128,7 @@ export class AppComponent implements OnInit{
     // }
   }
   onSubmit(e: Event): void{
-    if(this.lastname === '' && this.name === '' ) {
+    if(this.lastname === '' && this.name === '' && this.email === '' ) {
       this.valid === false;
       console.log(this.valid);
     } else {

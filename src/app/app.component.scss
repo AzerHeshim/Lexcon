@@ -279,14 +279,17 @@ header, .logo{
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.language_item, .line{
+.language_item, .line_v{
 margin-right: 10px;
   white-space: nowrap;
 }
-.line{
+.line_v{
   height: 40px;
   width: 2px;
   background: #fff;
+}
+.line{
+  background: #ffffff;
 }
 .accept{
   font-size: 12px
@@ -300,6 +303,9 @@ color: #2669B3;
 }
 .small .menu_item{
   color: #2669B3;
+}
+.small .line_v{
+  background: #2669B3 !important;
 }
 .small .line{
   background: #2669B3;
@@ -621,7 +627,7 @@ color: #2669B3;
 .after_expand{
   display: none;
   transition: all 0.5s;
-  height: 1185px;
+  height: 1229px;
   overflow: hidden;
   margin-top: 32px;
   flex-direction: column;
@@ -956,6 +962,10 @@ select.form-control {
   width: 50%;
   color: red;
   margin-bottom: 16px;
+  font-size: 12px;
+}
+.surname{
+  margin-left: auto;
 }
 .footer_copyright{
   display: flex;
@@ -1411,7 +1421,7 @@ a.effect-underline:hover:after {
     top: 0;
     left: 0;
     content: "";
-    background: rgba(255, 255, 255,1);
+    //background: rgba(255, 255, 255,1);
     transform: translateX(100%);
     transition: all 0.25s ease;
   }
