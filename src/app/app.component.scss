@@ -745,6 +745,7 @@ color: #2669B3;
   font-size: 20px;
   color: #2669B3;
   margin-bottom: 24px;
+  white-space:pre-wrap
 }
 .seven_header{
   font-size: 64px;
@@ -1708,7 +1709,7 @@ a.effect-underline:hover:after {
   .after_expand {
     display: none;
     transition: all 0.5s;
-    height: 1185px;
+    height: 1275px;
     overflow: hidden;
     margin-top: 32px;
     flex-direction: column;
