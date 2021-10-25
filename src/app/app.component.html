@@ -36,7 +36,10 @@
     <div id="site-menu">
       <img class="footers_logo" src="assets/lexcon_logo_footer.svg" alt="">
       <ul class="header_column top_menu">
-        <li class="menu_item" ><a href="">Home</a></li>
+        <input type="checkbox" id="menu-toggle"/>
+        <label id="menu-button"  for="menu-toggle">
+          <li class="menu_item" ><a style="text-decoration: none; color: #2669B3;" href="">{{ 'home.home' | translate }}</a></li>
+        </label>
         <input type="checkbox" id="menu-toggle"/>
         <label id="menu-button"  for="menu-toggle">
         <li class="menu_item" [ngxScrollTo]="'#about'" [ngxScrollToDuration]="2000"  [ngxScrollToOffset]="-70">{{ 'home.about' | translate }}</li>

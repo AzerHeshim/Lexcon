@@ -1435,7 +1435,9 @@ a.effect-underline:hover:after {
     transform: rotate(180deg);
     transition: transform .2s ease;
   }
-
+  #menu-toggle:checked + .menu-button .line {
+    background: #2669B3;;
+  }
   #menu-toggle:checked + #menu-button .line:nth-child(1){
     transform: translateY(5px) rotate(45deg);/*45deg*/
   }
